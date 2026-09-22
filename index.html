@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>تَدْرِيبٌ تَفَاعُلِيٌّ</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<main class="page">
+<div class="top-line"></div>
+<section class="title-card"><div class="title-mark">أَ</div><div><h1>كَلِمَاتٌ بِحَرَكَةِ الفَتْحَةِ</h1><p>تَدْرِيبٌ تَفَاعُلِيٌّ — اِقْرَأْ، وَصِلْ، وَاخْتَرْ.</p></div></section>
+
+<section class="card">
+<div class="heading"><span class="badge">١</span><div><h2>صِلِ الكَلِمَةَ بِالصُّورَةِ المُنَاسِبَةِ</h2><p>اِمْسِكِ الكَلِمَةَ وَاسْحَبْهَا إِلَى الصُّورَةِ.</p></div><span class="counter"><b id="mcount">٠</b> / ٣</span></div>
+<div id="matchBoard" class="match-board">
+<svg id="lines" class="lines"></svg>
+<div class="match-column"><div class="label">الكَلِمَاتُ</div><div id="words"></div></div>
+<div class="drag-center"><span>اسْحَبْ</span></div>
+<div class="match-column"><div class="label">الصُّوَرُ</div><div id="matchImages"></div></div>
+</div>
+<div id="matchHint" class="hint">اِمْسِكِ الكَلِمَةَ وَاسْحَبْهَا نَحْوَ الصُّورَةِ.</div>
+</section>
+
+<section class="card">
+<div class="heading"><span class="badge orange">٢</span><div><h2>اخْتَرِ الكَلِمَةَ الصَّحِيحَةَ لِلصُّورَةِ</h2><p>اُنْظُرْ إِلَى الصُّورَةِ، ثُمَّ اخْتَرْ إِحْدَى الكَلِمَاتِ.</p></div><span class="counter"><b id="ccount">٠</b> / ٣</span></div>
+<div id="questions" class="questions"></div>
+</section>
+
+<section id="done" class="done"><div class="done-check">✓</div><div><h2>أَحْسَنْتَ! أَكْمَلْتَ النَّشَاطَ</h2><p>لَا تَوْجَدُ دَرَجَةٌ ظَاهِرَةٌ. اِضْغَطْ لِإِرْسَالِ الإِجَابَاتِ.</p></div><button id="sendBtn">إِرْسَالُ الإِجَابَاتِ عَلَى وَاتْسَاب</button></section>
+</main>
+
+<div id="modal" class="modal"><div class="backdrop" data-close></div><div class="modal-box">
+<button class="close" data-close>×</button><div class="bubble">💬</div>
+<h2>إِلَى مَنْ تُرِيدُ الإِرْسَالَ؟</h2><p>اُكْتُبْ رَقْمَ وَاتْسَابَ المُسْتَلِمِ بِالصِّيغَةِ الدَّوْلِيَّةِ.</p>
+<input id="phone" type="tel" inputmode="tel" dir="ltr" placeholder="2010XXXXXXXX"><small>مِثَالٌ فِي مِصْر: 201012345678</small>
+<div id="previewBox" class="preview-box">
+  <div class="preview-title">سَتُجَهَّزُ صُورَةٌ تَحْتَوِي عَلَى اخْتِيَارَاتِكَ</div>
+  <div class="preview-mini">سَتَظْهَرُ الصُّوَرُ الَّتِي اخْتَرْتَهَا دَاخِلَ مَلَفِّ الإِجَابَاتِ.</div>
+</div>
+<button id="go">تَجْهِيزُ صُورَةِ الإِجَابَاتِ</button>
+<div id="err"></div>
+</div></div>
+<script src="app.js"></script>
+<canvas id="answerCanvas" class="hidden-canvas"></canvas>
+</body></html>
